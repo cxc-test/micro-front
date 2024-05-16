@@ -14,13 +14,11 @@ export class CxcInterceptor implements HttpInterceptor {
   constructor() {}
 
   intercept(req: HttpRequest<unknown>, next: HttpHandler): Observable<HttpEvent<unknown>> {
-    
     req = req.clone({
       setHeaders: {
-        Accept: 'application/json',
+        Accept: 'application/json'
       },
     });
-    console.log("dsdsds", req);
     return next.handle(req);
   }
 }
