@@ -19,7 +19,7 @@ export class ClientesApiService {
   }
 
   public deleteById(id: number): Observable<boolean> {
-    return this.http.delete<boolean>(this.url+`/delete/${id}`);
+    return this.http.delete<boolean>(this.url+`/deleteById/${id}`);
   }
 
   public create(model:ClienteModel): Observable<ClienteModel> {
